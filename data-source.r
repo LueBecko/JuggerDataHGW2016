@@ -23,4 +23,5 @@ game.data$S123D <- ifelse(!is.na(game.data$S3D), game.data$S12D + game.data$S3D,
 game.data$S1W <- sign(game.data$S1D)
 game.data$S2W <- sign(game.data$S2D)
 game.data$S3W <- sign(game.data$S3D)
+game.data$S12W <- game.data$S1W + game.data$S2W
 game.data$W <- sign(rowSums(cbind(game.data$S1W,game.data$S2W,game.data$S3W), na.rm = TRUE))
